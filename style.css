@@ -16,8 +16,9 @@ color:  white;
 background-color: var(--theme-color);
 height: 60px;
 }
+
 main{
-    height: 75vh;
+    
 }
 
 nav{
@@ -29,19 +30,25 @@ nav{
     justify-content: center;
     align-items: center;
     border-top: 1px solid var(--theme-color);
-    height: 80px;
     font-size: 1em;
 }
 .tabs{
-    display: block;
+    display: flex;
     height: 80px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .tab{
     text-decoration: none;
+    width: 32vw;
+    padding-left: 2px;
+    padding-right: 2px;
+    justify-content: center;
+    align-items: center;
 }
 .tab svg{
+    display: flex;
     fill: var(--theme-color);
 }
