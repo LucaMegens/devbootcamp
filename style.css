@@ -5,7 +5,10 @@
 }
 :root{
     --theme-color: #BB7AFF;
+    --navbar-height:80px;
+    --header-height:60px;
 }
+
 
 h1{
 display: flex;
@@ -17,9 +20,6 @@ background-color: var(--theme-color);
 height: 60px;
 }
 
-main{
-    
-}
 
 nav{
     display: flex;
@@ -38,17 +38,50 @@ nav{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .tab{
+    position: relative;
+    display: flex;
     text-decoration: none;
     width: 32vw;
     padding-left: 2px;
     padding-right: 2px;
     justify-content: center;
     align-items: center;
+    justify-content: space-evenly;
+    left: 25px;
+    opacity: 0.6;
 }
-.tab svg{
+
+.tab p{
+    position: relative;
     display: flex;
+    align-self: flex-start;
+}
+
+.tab svg{
+    position: relative;
+    display: flex;
+    justify-self: center;
     fill: var(--theme-color);
+    align-self: flex-end;
+    right: 49%;
+    top: 15px;
+}
+.active{
+    opacity: 1;
+}
+
+#screens{
+    height: calc(100vh - var(--navbar-height) - var(--header-height));
+    display: grid;
+    grid-template-columns: repeat(3, 100vw);
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+#screens .screen{
+    height: 100%;
+    scroll-snap-align: center;
 }
